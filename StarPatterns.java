@@ -23,43 +23,49 @@ class StarPatterns
 		System.out.println();
 		System.out.print("Enter the pattern number : ");
 		int option = scan.nextInt();
-		System.out.print("Enter the length of pattern : ");
+		if(option!=6)
+		{
+			System.out.print("Enter the length of pattern : ");
+		}
 		int lines = scan.nextInt();
+		System.out.println();
 		int starCount,spaceCount,mid;
 		
 		switch (option) 
 		{
 		case 1:
-			starCount=lines;
+			starCount=1;
 			StarPatterns.rightangle(lines,starCount);
+			System.out.println();
 			StarPatterns.selected();
-
 			break;
 		case 2:
 			starCount=lines;
 			spaceCount=0;
 			StarPatterns.upsidedownrightangle(lines,spaceCount,starCount);
+			System.out.println();
 			StarPatterns.selected();
 			break;
-
 		case 3:
 			starCount=1;
 			spaceCount=lines;
 			StarPatterns.triangle(lines,spaceCount,starCount);
+			System.out.println();
 			StarPatterns.selected();
-
 			break;
 		case 4:
 			starCount=lines*2-1;
 			spaceCount=0;
 			StarPatterns.upsidedowntriangle(lines,spaceCount,starCount);
+			System.out.println();
 			StarPatterns.selected();
-
 			break;
 		case 5:
 			if(lines%2==0)
 			{
 				System.out.println("This pattern needs odd lines input. Please try again.");
+				System.out.println();
+				System.out.println();
 				StarPatterns.selected();
 			}
 			else
@@ -76,8 +82,8 @@ class StarPatterns
 				spaceCount=count;
 				mid=(lines-1)/2;
 				StarPatterns.Rhombus(lines,spaceCount,starCount,mid);
+				System.out.println();
 				StarPatterns.selected();
-
 			}
 			break;
 		case 6:
@@ -159,7 +165,6 @@ class StarPatterns
 
 	static void upsidedownrightangle(int lines,int spaceCount,int starCount)
 	{
-
 		for(int i=0 ; i<lines ; i++)
 		{
 			for(int j=0 ; j<spaceCount ; j++)
@@ -171,10 +176,9 @@ class StarPatterns
 			{
 				System.out.print(" *");
 			}
-
 			System.out.println();
-			starCount++;
-			spaceCount--;	
+			starCount--;
+			spaceCount++;	
 		}
 	}
 
@@ -188,7 +192,7 @@ class StarPatterns
 				System.out.print(" *");
 			}
 			System.out.println();
-			starCount--;
+			starCount++;
 		}		
 	}
 }
