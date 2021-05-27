@@ -1,5 +1,3 @@
-package org.programs;
-
 import java.util.Scanner;
 
 class StarPatterns
