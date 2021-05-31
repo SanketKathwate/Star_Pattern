@@ -7,7 +7,6 @@ class StarPatterns
 		StarPatterns.selected();
 	}
 	
-
 	static void selected()
 	{
 		Scanner scan = new Scanner(System.in);
@@ -21,11 +20,12 @@ class StarPatterns
 		System.out.println();
 		System.out.print("Enter the pattern number : ");
 		int option = scan.nextInt();
-		if(option!=6)
+		int lines=0;
+		if(option<6)
 		{
 			System.out.print("Enter the length of pattern : ");
+			lines = scan.nextInt();
 		}
-		int lines = scan.nextInt();
 		System.out.println();
 		int starCount,spaceCount,mid;
 		
@@ -85,6 +85,7 @@ class StarPatterns
 			}
 			break;
 		case 6:
+			System.out.println("Thank You");
 			break;
 		default:
 			System.out.println("Invalid Option");
